@@ -5,36 +5,17 @@ import Footer from '../components/Footer';
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className="font-poppins">
             {/* Navbar section */}
-            <nav>
+            <nav className='w-11/12 mx-auto'>
                 <Navbar></Navbar>
             </nav>
 
-            {/* Banner/Slider section */}
-            <header>
-
-            </header>
-
-            {/* About section */}
-            <section>
-
-            </section>
-
-            {/* How it works section */}
-            <section>
-
-            </section>
-
-            {/* Extra section */}
-            <section>
-
-            </section>
             {/* outlet */}
             <Outlet></Outlet>
 
             {/* Footer */}
-            <footer className='mt-40'>
+            <footer className='w-11/12 mx-auto mt-40'>
                 <Footer></Footer>
             </footer>
         </div>

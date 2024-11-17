@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Warm Clothing Drive - Dhaka",
+        "image": "https://i.ibb.co.com/Zmy70kD/1.jpg",
+        "description": "Help us provide warm clothes to underprivileged communities in Dhaka.",
+        "status": "Active",
+        "contactInfo": "Contact: +880123456789 | Email: dhaka@wintercare.org",
+        "division": "Dhaka"
+    },
+    {
+        "id": 2,
+        "title": "Blanket Donation Campaign - Chattogram",
+        "image": "https://i.ibb.co.com/ssphhyT/2.jpg",
+        "description": "Join us in donating blankets to families in need across Chattogram.",
+        "status": "Active",
+        "contactInfo": "Contact: +880987654321 | Email: chattogram@wintercare.org",
+        "division": "Chattogram"
+    },
+    {
+        "id": 3,
+        "title": "Winter Warmth - Rajshahi",
+        "image": "https://i.ibb.co.com/B3n7vk4/3.jpg",
+        "description": "Support our mission to distribute winter clothing in Rajshahi's rural areas.",
+        "status": "Active",
+        "contactInfo": "Contact: +8801122334455 | Email: rajshahi@wintercare.org",
+        "division": "Rajshahi"
+    },
+    {
+        "id": 4,
+        "title": "Sweater Drive - Sylhet",
+        "image": "https://i.ibb.co.com/HP1CMX7/4.jpg",
+        "description": "Help us collect sweaters for low-income families in Sylhet.",
+        "status": "Active",
+        "contactInfo": "Contact: +8805566778899 | Email: sylhet@wintercare.org",
+        "division": "Sylhet"
+    },
+    {
+        "id": 5,
+        "title": "Winter Aid - Barishal",
+        "image": "https://i.ibb.co.com/S5dpmyF/5.jpg",
+        "description": "Contribute to providing warm jackets to vulnerable children in Barishal.",
+        "status": "Active",
+        "contactInfo": "Contact: +8804455667788 | Email: barishal@wintercare.org",
+        "division": "Barishal"
+    },
+    {
+        "id": 6,
+        "title": "Keeping Khulna Warm",
+        "image": "https://i.ibb.co.com/QrwJvkf/6.jpg",
+        "description": "Join our initiative to deliver essential winter clothing to people in Khulna.",
+        "status": "Active",
+        "contactInfo": "Contact: +8806677889900 | Email: khulna@wintercare.org",
+        "division": "Khulna"
+    },
+    {
+        "id": 7,
+        "title": "Patuakhali Winter Relief",
+        "image": "https://i.ibb.co.com/BfwSDdg/7.jpg",
+        "description": "Donate now to provide winter supplies to remote communities in Patuakhali.",
+        "status": "Active",
+        "contactInfo": "Contact: +8807788990011 | Email: patuakhali@wintercare.org",
+        "division": "Barishal"
+    },
+    {
+        "id": 8,
+        "title": "Tangail Warm Clothing Distribution",
+        "image": "https://i.ibb.co.com/hDf7Rm0/8.jpg",
+        "description": "Help us bring warmth to Tangail's low-income families this winter.",
+        "status": "Active",
+        "contactInfo": "Contact: +8809988776655 | Email: tangail@wintercare.org",
+        "division": "Dhaka"
+    },
+    {
+        "id": 9,
+        "title": "Rangpur Blanket Drive",
+        "image": "https://i.ibb.co.com/QHwnFNw/9.jpg",
+        "description": "Assist us in delivering essential blankets to underprivileged families in Rangpur.",
+        "status": "Active",
+        "contactInfo": "Contact: +8804455663322 | Email: rangpur@wintercare.org",
+        "division": "Rangpur"
+    },
+    {
+        "id": 10,
+        "title": "Comilla Winter Donation Campaign",
+        "image": "https://i.ibb.co.com/WBLkGQd/10.jpg",
+        "description": "Join our mission to distribute winter clothing to families in Comilla.",
+        "status": "Active",
+        "contactInfo": "Contact: +8803344556677 | Email: comilla@wintercare.org",
+        "division": "Chattogram"
+    },
+    {
+        "id": 11,
+        "title": "Mymensingh Sweater Collection",
+        "image": "https://i.ibb.co.com/4MYdW3Z/11.jpg",
+        "description": "Help us keep children in Mymensingh warm during the chilly winter season.",
+        "status": "Active",
+        "contactInfo": "Contact: +8805566778899 | Email: mymensingh@wintercare.org",
+        "division": "Mymensingh"
+    },
+    {
+        "id": 12,
+        "title": "Dinajpur Winter Relief Fund",
+        "image": "https://i.ibb.co.com/ZHcFD9b/12.jpg",
+        "description": "Support our efforts to deliver winter relief items to Dinajpur's vulnerable communities.",
+        "status": "Active",
+        "contactInfo": "Contact: +8806677889900 | Email: dinajpur@wintercare.org",
+        "division": "Rangpur"
+    }
+]
