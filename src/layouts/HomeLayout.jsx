@@ -7,7 +7,7 @@ const HomeLayout = () => {
     return (
         <div className="font-poppins">
             {/* Navbar section */}
-            <nav className='w-11/12 mx-auto'>
+            <nav className='max-w-6xl mx-auto'>
                 <Navbar></Navbar>
             </nav>
 
@@ -15,7 +15,7 @@ const HomeLayout = () => {
             <Outlet></Outlet>
 
             {/* Footer */}
-            <footer className='w-11/12 mx-auto mt-40'>
+            <footer className='max-w-6xl mx-auto mt-40'>
                 <Footer></Footer>
             </footer>
         </div>
