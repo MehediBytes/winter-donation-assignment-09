@@ -3,7 +3,7 @@ import 'animate.css';
 
 const HowItWorks = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-50 via-white to-blue-50 p-10 rounded-lg shadow-lg space-y-10">
+        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-lg shadow-lg space-y-10">
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 How It Works
             </h2>
@@ -33,6 +33,7 @@ const HowItWorks = () => {
             </div>
             <div className="bg-blue-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold text-blue-600 mb-4 text-center">Supported Divisions</h3>
+                <hr className="border-t-2 border-blue-300 mx-auto w-1/3 mb-5" />
                 <ul className="list-disc list-inside text-gray-800 text-lg">
                     <li>Dhaka</li>
                     <li>Chattogram</li>

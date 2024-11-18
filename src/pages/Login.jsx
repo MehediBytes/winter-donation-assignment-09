@@ -72,7 +72,13 @@ const Login = () => {
                             {showPassword ? <FaEyeSlash /> : <FaEye />}
                         </span>
                         <label className="label">
-                            <a href="#" className="label-text-alt text-blue-500 link-hover">Forgot password?</a>
+                            <Link
+                                to="/auth/forgot-password"
+                                state={{ email }}
+                                className="label-text-alt text-blue-500 link-hover"
+                            >
+                                Forgot password?
+                            </Link>
                         </label>
                     </div>
                     <button

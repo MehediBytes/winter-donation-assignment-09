@@ -8,7 +8,7 @@ const Volunteer = () => {
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 Volunteer with Us
             </h2>
-            <hr className="border-t-2 border-blue-300 w-1/2 mx-auto" />
+            <hr className="border-t-2 border-blue-300 w-2/3 mx-auto" />
             <p className="text-gray-800 text-lg text-center leading-relaxed">
                 Want to make a bigger impact? Be part of our dedicated volunteer team
                 and help ensure that donations bring warmth and comfort to those in need.
@@ -20,7 +20,7 @@ const Volunteer = () => {
                     </button>
                 </Link>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md">
+            <div className="bg-blue-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-2xl font-semibold text-blue-700 text-center mb-3">
                     Why Volunteer?
                 </h3>

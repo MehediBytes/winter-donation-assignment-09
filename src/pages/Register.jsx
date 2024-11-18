@@ -49,12 +49,12 @@ const Register = () => {
     const handleGoogleLogin = () => {
         googleLogin()
             .then(() => {
-                toast.success("Logged in with Google successfully!");
+                toast.success("Registered with Google successfully!");
                 navigate("/");
             })
             .catch((error) => {
                 toast.error(
-                    error?.message || "Google login failed! Please try again."
+                    error?.message || "Google Register failed! Please try again."
                 );
             });
     };

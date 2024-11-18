@@ -11,27 +11,27 @@ const Home = () => {
     return (
         <div>
             {/* Banner/Slider section */}
-            <header className='max-w-5xl mx-auto my-10 bg-[#b183ea] p-4 rounded-lg'>
+            <header className='max-w-5xl mx-auto my-10 rounded-xl'>
                 <Banner donations={donations}></Banner>
             </header>
 
             {/* About section */}
-            <section className='max-w-5xl mx-auto mb-10 bg-[#b183ea] p-4 rounded-lg shadow-xl'>
+            <section className='max-w-5xl mx-auto mb-10 rounded-xl shadow-xl'>
                 <AboutSection></AboutSection>
             </section>
 
             {/* How it works section */}
-            <section className="bg-[#b183ea] p-4 rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
+            <section className=" rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
                 <HowItWorks></HowItWorks>
             </section>
 
             {/* Extra section-1 */}
-            <section className="bg-[#b183ea] p-4 rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
+            <section className=" rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
                 <Testimonials></Testimonials>
             </section>
 
             {/* Extra section-2 */}
-            <section className="bg-[#b183ea] p-4 rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
+            <section className=" rounded-xl shadow-xl max-w-5xl mx-auto mb-10">
                 <Volunteer></Volunteer>
             </section>
         </div>
