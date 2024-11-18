@@ -11,7 +11,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    console.log(user);
+    const [showPassword, setShowPassword] = useState(false);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -39,7 +39,9 @@ const AuthProvider = ({ children }) => {
         googleLogin,
         logout,
         loading,
-        updateUserProfile
+        updateUserProfile,
+        showPassword,
+        setShowPassword
     };
     return (
         <AuthContext.Provider value={authInfo}>

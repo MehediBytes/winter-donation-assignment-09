@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
-import { FaGoogle } from "react-icons/fa6";
+import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
-    const { register, googleLogin, setUser, updateUserProfile } = useContext(AuthContext);
+    const { register, googleLogin, setUser, updateUserProfile, showPassword, setShowPassword } = useContext(AuthContext);
     const navigate = useNavigate();
+
+    const [password, setPassword] = useState("");
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -14,7 +16,6 @@ const Register = () => {
         const name = form.get("name");
         const photo = form.get("photo");
         const email = form.get("email");
-        const password = form.get("password");
 
         // Password Validation
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -124,13 +125,28 @@ const Register = () => {
                         >
                             Password
                         </label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
-                            required
-                        />
+                        <div className="relative">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                id="password"
+                                className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
+                                required
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <button
+                                type="button"
+                                className="absolute right-3 top-3 text-gray-600"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? (
+                                    <FaEyeSlash className="text-lg" />
+                                ) : (
+                                    <FaEye className="text-lg" />
+                                )}
+                            </button>
+                        </div>
                     </div>
 
                     {/* Submit Button */}

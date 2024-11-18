@@ -2,14 +2,18 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaGoogle } from "react-icons/fa6";
+import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
-    const { login, googleLogin } = useContext(AuthContext);
+    const { login, googleLogin, showPassword, setShowPassword } = useContext(AuthContext);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const navigate = useNavigate();
+
     const location = useLocation();
+
     const from = location.state?.from?.pathname || "/";
 
     const handleLogin = async (e) => {
@@ -39,7 +43,7 @@ const Login = () => {
                 <h2 className="text-3xl font-bold mb-6 text-center text-blue-700 animate__animated animate__slower animate__fadeInDown">
                     Login
                 </h2>
-                <hr className="border-blue-300"/>
+                <hr className="border-blue-300" />
                 <form onSubmit={handleLogin} className="space-y-6 mt-6">
                     <div>
                         <label className="block text-gray-700 font-medium mb-2">Email</label>
@@ -51,15 +55,22 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <div>
+                    <div className="relative">
                         <label className="block text-gray-700 font-medium mb-2">Password</label>
                         <input
-                            type="password"
-                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
+                            type={showPassword ? "text" : "password"}
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg pr-10"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
+                        {/* Password Toggle Icon */}
+                        <span
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                        >
+                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                        </span>
                         <label className="label">
                             <a href="#" className="label-text-alt text-blue-500 link-hover">Forgot password?</a>
                         </label>

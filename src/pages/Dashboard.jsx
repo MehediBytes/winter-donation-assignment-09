@@ -44,7 +44,7 @@ const Dashboard = () => {
 
             <div className="w-full p-4">
                 <p className="text-center text-gray-500 font-semibold mt-5">
-                    ❄️ Stay warm this winter and keep your profile up to date! ❄️
+                    Stay warm this winter and keep your profile up to date!
                 </p>
             </div>
         </div>
