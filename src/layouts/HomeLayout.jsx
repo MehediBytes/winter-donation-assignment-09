@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const HomeLayout = () => {
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto bg-gradient-to-b from-blue-50 to-blue-200">
             {/* Navbar section */}
             <nav className=''>
                 <Navbar></Navbar>
@@ -15,7 +15,7 @@ const HomeLayout = () => {
             <Outlet></Outlet>
 
             {/* Footer */}
-            <footer className=' mt-40'>
+            <footer className=''>
                 <Footer></Footer>
             </footer>
         </div>

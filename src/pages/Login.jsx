@@ -19,7 +19,7 @@ const Login = () => {
             toast.success("Logged in successfully!");
             navigate(from, { replace: true });
         } catch (error) {
-            toast.error("Invalid credentials!");
+            toast.error("Invalid Email or Password!");
         }
     };
 
@@ -34,27 +34,57 @@ const Login = () => {
     };
 
     return (
-        <div className="flex items-center justify-center mt-10">
-            <div className="p-8 bg-white rounded-lg shadow-xl w-96 border">
-                <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-                <hr />
-                <form onSubmit={handleLogin}>
-                    <div className="my-4">
-                        <label className="block mb-2">Email</label>
-                        <input type="email" className="input input-bordered w-full" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <div className="flex items-center justify-center my-10">
+            <div className="p-8 bg-white rounded-lg shadow-lg w-full max-w-md border border-blue-300">
+                <h2 className="text-3xl font-bold mb-6 text-center text-blue-700 animate__animated animate__slower animate__fadeInDown">
+                    Login
+                </h2>
+                <hr className="border-blue-300"/>
+                <form onSubmit={handleLogin} className="space-y-6 mt-6">
+                    <div>
+                        <label className="block text-gray-700 font-medium mb-2">Email</label>
+                        <input
+                            type="email"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
                     </div>
-                    <div className="mb-4">
-                        <label className="block mb-2">Password</label>
-                        <input type="password" className="input input-bordered w-full" value={password} onChange={(e) => setPassword(e.target.value)} required />
-
+                    <div>
+                        <label className="block text-gray-700 font-medium mb-2">Password</label>
+                        <input
+                            type="password"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
                         <label className="label">
-                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <a href="#" className="label-text-alt text-blue-500 link-hover">Forgot password?</a>
                         </label>
                     </div>
-                    <button type="submit" className="btn btn-primary w-full mb-4">Login</button>
-                    <button type="button" onClick={handleGoogleLogin} className="btn text-blue-400 border-blue-400 w-full"><FaGoogle></FaGoogle> Login with Google</button>
+                    <button
+                        type="submit"
+                        className="btn btn-primary w-full bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transform transition-transform"
+                    >
+                        Login
+                    </button>
+                    <button
+                        type="button"
+                        onClick={handleGoogleLogin}
+                        className="btn w-full bg-blue-100 text-blue-600 border-blue-400 hover:bg-blue-200 rounded-lg flex items-center justify-center space-x-2 shadow-sm"
+                    >
+                        <FaGoogle className="text-lg" />
+                        <span>Login with Google</span>
+                    </button>
                 </form>
-                <p className="text-sm mt-4 text-center">Don't have an account? <Link to="/auth/register" className="text-blue-500">Register</Link></p>
+                <p className="text-sm mt-6 text-center">
+                    Don't have an account?{" "}
+                    <Link to="/auth/register" className="text-blue-600 font-bold hover:underline">
+                        Register
+                    </Link>
+                </p>
             </div>
         </div>
     );

@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
-import { updateProfile } from "firebase/auth";
 import { FaGoogle } from "react-icons/fa6";
-
 
 const Register = () => {
     const { register, googleLogin, setUser, updateUserProfile } = useContext(AuthContext);
@@ -34,9 +32,11 @@ const Register = () => {
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
                         toast.success("Registered successfully!");
-                        navigate("/")
+                        navigate("/");
                     })
-                    .catch(err => { alert(err); })
+                    .catch((err) => {
+                        toast.error(err.message || "Profile update failed!");
+                    });
             })
             .catch((error) => {
                 toast.error(
@@ -59,68 +59,85 @@ const Register = () => {
     };
 
     return (
-        <div className="flex items-center justify-center mt-10">
-            <div className="p-8 bg-white rounded-lg shadow-xl w-96 border">
-                <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
-                <hr />
-                <form onSubmit={handleRegister}>
+        <div className="flex items-center justify-center my-10">
+            <div className="p-8 bg-white rounded-lg shadow-lg w-full max-w-md border border-blue-300">
+                <h2 className="text-3xl font-bold mb-6 text-center text-blue-800 animate__animated animate__slower animate__fadeInDown">
+                    Register
+                </h2>
+                <hr className="border-blue-300" />
+                <form onSubmit={handleRegister} className="space-y-6 mt-6">
                     {/* Name Field */}
-                    <div className="my-4">
-                        <label htmlFor="name" className="block mb-2">
+                    <div>
+                        <label
+                            htmlFor="name"
+                            className="block mb-2 text-gray-700 font-medium"
+                        >
                             Name
                         </label>
                         <input
                             type="text"
                             name="name"
                             id="name"
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
                             required
                         />
                     </div>
 
                     {/* Photo URL Field */}
-                    <div className="mb-4">
-                        <label htmlFor="photo" className="block mb-2">
+                    <div>
+                        <label
+                            htmlFor="photo"
+                            className="block mb-2 text-gray-700 font-medium"
+                        >
                             Photo URL
                         </label>
                         <input
                             type="text"
                             name="photo"
                             id="photo"
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
                         />
                     </div>
 
                     {/* Email Field */}
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block mb-2">
+                    <div>
+                        <label
+                            htmlFor="email"
+                            className="block mb-2 text-gray-700 font-medium"
+                        >
                             Email
                         </label>
                         <input
                             type="email"
                             name="email"
                             id="email"
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
                             required
                         />
                     </div>
 
                     {/* Password Field */}
-                    <div className="mb-4">
-                        <label htmlFor="password" className="block mb-2">
+                    <div>
+                        <label
+                            htmlFor="password"
+                            className="block mb-2 text-gray-700 font-medium"
+                        >
                             Password
                         </label>
                         <input
                             type="password"
                             name="password"
                             id="password"
-                            className="input input-bordered w-full"
+                            className="input input-bordered w-full border-blue-300 focus:ring focus:ring-blue-200 rounded-lg"
                             required
                         />
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit" className="btn btn-primary w-full mb-4">
+                    <button
+                        type="submit"
+                        className="btn btn-primary w-full bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transform transition-transform"
+                    >
                         Register
                     </button>
 
@@ -128,16 +145,20 @@ const Register = () => {
                     <button
                         type="button"
                         onClick={handleGoogleLogin}
-                        className="btn text-blue-400 border-blue-400 w-full"
-                    ><FaGoogle></FaGoogle>
-                        Register with Google
+                        className="btn w-full bg-blue-100 text-blue-600 border-blue-400 hover:bg-blue-200 rounded-lg flex items-center justify-center space-x-2 shadow-sm"
+                    >
+                        <FaGoogle className="text-lg" />
+                        <span>Register with Google</span>
                     </button>
                 </form>
 
                 {/* Login Link */}
-                <p className="text-sm mt-4 text-center">
+                <p className="text-sm mt-6 text-center">
                     Already have an account?{" "}
-                    <Link to="/auth/login" className="text-blue-500">
+                    <Link
+                        to="/auth/login"
+                        className="text-blue-600 font-bold hover:underline"
+                    >
                         Login
                     </Link>
                 </p>

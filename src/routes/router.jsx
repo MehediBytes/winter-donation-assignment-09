@@ -12,6 +12,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+            },
+            {
+                path: "/update-profile",
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>,
             },
             {
                 path: "/donation/:id",
