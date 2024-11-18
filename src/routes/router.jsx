@@ -8,6 +8,10 @@ import Dashboadr from "../pages/Dashboard";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
 import DonationDetails from "../pages/DonationDetails";
+import AuthLayout from "../layouts/AuthLayout";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -15,7 +19,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomeLayout></HomeLayout>,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 path: "/",
                 element: <Home></Home>,
@@ -32,16 +36,30 @@ const router = createBrowserRouter([
             },
             {
                 path: "/dashboard",
-                element: <Dashboard></Dashboard>,
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
             },
             {
                 path: "/donation/:id",
-                element: <DonationDetails></DonationDetails>,
+                element: <PrivateRoute><DonationDetails></DonationDetails></PrivateRoute>,
                 loader: () => fetch('../donation.json'),
             },
         ]
     },
-    
+    {
+        path: "/auth",
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>,
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>,
+            }
+        ]
+    },
+
 ]);
 
 export default router;

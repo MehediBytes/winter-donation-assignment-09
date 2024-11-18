@@ -1,11 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 import 'animate.css';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logout } = useContext(AuthContext);
+
     return (
-        <div className="navbar bg-[#b183ea]">
+        <div className="navbar bg-[#b183ea] p-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +36,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='animate__animated animate__tada animate__slower animate__infinite'>
-                    <img className='w-28 h-28 rounded-full' src={logo} alt="logo" />
+                    <img className='w-24 h-24 rounded-full' src={logo} alt="logo" />
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -43,8 +47,20 @@ const Navbar = () => {
                     <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end mr-5">
+                <div className="login flex gap-2 items-center">
+                    <div>
+                        {user && user?.email ? (
+                            <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="User" />) : ""
+                        }
+                    </div>
+                    <div>
+                        {
+                            user && user?.email ? (<button onClick={logout} className="btn btn-neutral">Log-Out</button>) : (<Link to={"/auth/login"} className="btn btn-primary">Login</Link>)
+                        }
+                    </div>
+
+                </div>
             </div>
         </div>
     );
