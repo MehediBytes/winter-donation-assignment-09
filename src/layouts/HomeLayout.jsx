@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { ToastContainer } from "react-toastify";
 
 const HomeLayout = () => {
     return (
@@ -18,6 +19,9 @@ const HomeLayout = () => {
             <footer className='max-w-6xl mx-auto mt-40'>
                 <Footer></Footer>
             </footer>
+
+            {/* Toast */}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'animate.css';
 
 const Volunteer = () => {
     return (
         <div className="space-y-10">
-            <h2 className="text-3xl font-bold text-center">
+            <h2 className="text-3xl font-bold text-center animate__animated animate__heartBeat animate__slower animate__infinite">
                 Volunteer with Us
             </h2>
             <hr />

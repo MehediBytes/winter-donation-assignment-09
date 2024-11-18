@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.jpg';
+import 'animate.css';
 
 const Navbar = () => {
     return (
@@ -30,7 +31,7 @@ const Navbar = () => {
                         <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
                     </ul>
                 </div>
-                <div>
+                <div className='animate__animated animate__tada animate__slower animate__infinite'>
                     <img className='w-28 h-28 rounded-full' src={logo} alt="logo" />
                 </div>
             </div>

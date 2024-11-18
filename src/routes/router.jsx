@@ -7,6 +7,7 @@ import Help from "../pages/Help";
 import Dashboadr from "../pages/Dashboard";
 import Dashboard from "../pages/Dashboard";
 import ErrorPage from "../pages/ErrorPage";
+import DonationDetails from "../pages/DonationDetails";
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,12 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard></Dashboard>,
-            }
+            },
+            {
+                path: "/donation/:id",
+                element: <DonationDetails></DonationDetails>,
+                loader: () => fetch('../donation.json'),
+            },
         ]
     },
     

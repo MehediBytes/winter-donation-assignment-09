@@ -1,9 +1,10 @@
 import React from 'react';
+import 'animate.css';
 
 const Testimonials = () => {
     return (
         <div className='space-y-10'>
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-4 animate__animated animate__heartBeat animate__slower animate__infinite">
                 What People Are Saying
             </h2>
             <hr />

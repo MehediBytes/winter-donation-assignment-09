@@ -3,7 +3,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Donation = () => {
     const donations = useLoaderData();
-    console.log(donations);
     return (
         <div className='max-w-5xl mx-auto my-10'>
             <h1 className="text-3xl font-bold text-center mb-8">Donation Campaigns</h1>
@@ -13,7 +12,7 @@ const Donation = () => {
                         key={donation.id}
                         className="card bg-base-100 shadow-xl border border-gray-200 p-2"
                     >
-                        <div className='h-48'>
+                        <div className='h-52'>
                             <img
                                 src={donation.image}
                                 alt={donation.title}

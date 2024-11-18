@@ -1,9 +1,10 @@
 import React from 'react';
+import 'animate.css';
 
 const AboutSection = () => {
     return (
         <div className="space-y-10">
-            <h2 className="text-3xl font-bold text-center">
+            <h2 className="text-3xl font-bold text-center animate__animated animate__heartBeat animate__slower animate__infinite">
                 About Us
             </h2>
             <hr />
