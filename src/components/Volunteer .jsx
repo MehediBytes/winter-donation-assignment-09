@@ -4,7 +4,7 @@ import 'animate.css';
 
 const Volunteer = () => {
     return (
-        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-lg shadow-md space-y-8">
+        <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-10 rounded-lg shadow-md space-y-8">
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 Volunteer with Us
             </h2>
@@ -14,7 +14,7 @@ const Volunteer = () => {
                 and help ensure that donations bring warmth and comfort to those in need.
             </p>
             <div className="flex justify-center">
-                <Link to={"/auth/login"}>
+                <Link to={"/auth/register"}>
                     <button className="px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-full shadow-lg hover:bg-blue-700 animate__animated animate__pulse animate__infinite">
                         Sign Up as a Volunteer
                     </button>

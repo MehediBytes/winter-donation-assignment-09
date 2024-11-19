@@ -42,7 +42,7 @@ const ForgotPassword = () => {
                 </div>
                 <button
                     onClick={handleResetPassword}
-                    className="btn btn-primary w-full mt-4"
+                    className="btn btn-primary w-full text-white mt-4"
                 >
                     Reset Password
                 </button>

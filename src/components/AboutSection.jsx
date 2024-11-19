@@ -3,7 +3,7 @@ import 'animate.css';
 
 const AboutSection = () => {
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-10 rounded-lg shadow-lg space-y-8">
+        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-lg shadow-lg space-y-8">
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 About Us
             </h2>
@@ -23,7 +23,7 @@ const AboutSection = () => {
             </p>
             <p className="text-gray-800 text-lg text-center">
                 Together, we can make this winter a season of kindness and care.
-                <span className="block mt-4 font-bold text-blue-500">Join us today!</span>
+                <span className="block mt-4 font-bold text-blue-500 animate__animated animate__pulse animate__infinite">Join us today!</span>
             </p>
         </div>
     );

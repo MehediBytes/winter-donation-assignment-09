@@ -27,9 +27,13 @@ const AuthProvider = ({ children }) => {
     }
 
     const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
+
     const register = (email, password) => createUserWithEmailAndPassword(auth, email, password);
+
     const googleLogin = () => signInWithPopup(auth, googleProvider);
+    
     const logout = () => signOut(auth);
+    
     const resetPassword = (email) => sendPasswordResetEmail(auth, email);
 
     const authInfo = {

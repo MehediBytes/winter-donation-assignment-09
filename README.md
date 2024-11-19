@@ -3,8 +3,8 @@
 ## Project Overview
 The **Winter Clothing Donation Website** is a single-page web application designed to connect donors with volunteers in Bangladesh, facilitating the donation of winter clothing to people in need. The platform helps provide warmth to vulnerable communities, especially in rural and low-income areas, during the cold winter months.
 
-## Live URL
-[https://winter-donation-09.web.app/]
+## 🚀 Live Website Link
+[Winter donation](https://winter-donation-09.web.app/)
 
 ## Key Features
 - **Home Page:** A winter-themed homepage with a banner showcasing donation campaigns and how users can contribute.
@@ -25,3 +25,4 @@ The **Winter Clothing Donation Website** is a single-page web application design
 - **React Router**: For routing and navigating between pages.
 - **React Toastify**: For displaying notifications and toast messages.
 - **React icons**: For using icons.
+- **Animate.css**: For using various eyecatching animation.

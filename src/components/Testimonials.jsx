@@ -3,7 +3,7 @@ import 'animate.css';
 
 const Testimonials = () => {
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-10 rounded-lg shadow-lg space-y-10">
+        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-lg shadow-lg space-y-10">
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 What People Are Saying
             </h2>

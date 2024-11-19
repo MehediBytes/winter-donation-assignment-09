@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const DonationDetails = () => {
-    const { id } = useParams(); 
+    const { id } = useParams();
 
     const data = useLoaderData();
 
@@ -32,18 +32,14 @@ const DonationDetails = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        toast.success("Thank you! We will reach your destination soon", {
-            position: "top-center",
-            autoClose: 3000, 
-            hideProgressBar: false,
-        });
+        toast.success("Thank you! We will reach your destination soon");
         setFormData({
             quantity: "",
             itemType: "",
             pickupLocation: "",
             additionalNotes: "",
         });
-        
+
     };
 
     if (!donation) {
@@ -66,6 +62,9 @@ const DonationDetails = () => {
                     <p className="text-gray-700 mt-4">{donation.description}</p>
                     <div className="mt-6">
                         <p className="text-lg font-semibold">
+                            <span className="text-primary">Status:</span> <span className="badge badge-success badge-lg text-white">{donation.status}</span>
+                        </p>
+                        <p className="text-lg font-semibold">
                             <span className="text-primary">Division:</span> {donation.division}
                         </p>
                         <p className="text-lg font-semibold">
@@ -77,8 +76,8 @@ const DonationDetails = () => {
             </div>
 
             {/* Donation Form */}
-            <div className="mt-8 max-w-4xl mx-auto border p-5 rounded-xl">
-                <h3 className="text-2xl font-semibold mb-4">Donate Now</h3>
+            <div className="mt-8 max-w-4xl mx-auto border border-blue-400 p-5 rounded-xl">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-600">Donate Now</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="form-control">
                         <label htmlFor="quantity" className="label">
@@ -142,7 +141,7 @@ const DonationDetails = () => {
                         />
                     </div>
 
-                    <button type="submit" className="btn bg-[#b183ea] w-full">
+                    <button type="submit" className="btn btn-primary text-white w-full">
                         Submit Donation
                     </button>
                 </form>
