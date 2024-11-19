@@ -19,11 +19,10 @@ const UpdateProfile = () => {
 
         try {
             await updateUserProfile({ displayName: name, photoURL });
-            setUser((prev) => ({ ...prev, displayName: name, photoURL })); // Update locally for immediate UI feedback
+            setUser((prev) => ({ ...prev, displayName: name, photoURL }));
             toast.success("Profile updated successfully!");
-            navigate("/dashboard"); // Navigate back to the dashboard
+            navigate("/dashboard");
         } catch (error) {
-            console.error("Error updating profile:", error);
             toast.error("Failed to update profile. Please try again.");
         }
     };
