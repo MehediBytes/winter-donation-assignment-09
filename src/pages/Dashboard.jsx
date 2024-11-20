@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext);
@@ -18,6 +19,9 @@ const Dashboard = () => {
 
     return (
         <div className="flex flex-col items-center justify-center my-10">
+            <Helmet>
+                <title>Dashboard | Warm-Hearts</title>
+            </Helmet>
             <h1 className="text-4xl font-extrabold text-blue-700 mb-8 animate__animated animate__slower animate__fadeInDown">
                 Welcome, {user.displayName || "User"}!
             </h1>

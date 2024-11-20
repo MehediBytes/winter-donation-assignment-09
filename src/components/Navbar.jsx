@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/warm-heart-logo.webp';
 import 'animate.css';
 import { AuthContext } from '../provider/AuthProvider';
 

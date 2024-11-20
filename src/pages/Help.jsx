@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import bannerBg from "../assets/help-banner.jpg"
+import { Helmet } from "react-helmet-async";
 
 const Help = () => {
     return (
         <div className="max-w-5xl mx-auto my-10">
-            {/* <div>
-                <img src={banner} alt="" />
-            </div> */}
+            <Helmet>
+                <title>Help | Warm-Hearts</title>
+            </Helmet>
             <div className="px-6">
                 {/* Header Section */}
                 <div className="text-center bg-cover bg-center bg-no-repeat p-10 lg:p-24 w-full mx-auto mb-10 rounded-lg" style={{ backgroundImage: `url(${bannerBg})` }}>

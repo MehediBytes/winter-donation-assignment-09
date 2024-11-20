@@ -5,11 +5,15 @@ import AboutSection from '../components/AboutSection';
 import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import Volunteer from '../components/Volunteer ';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     const donations = useLoaderData();
     return (
         <div>
+            <Helmet>
+                <title>Warm-Hearts</title>
+            </Helmet>
             {/* Banner/Slider section */}
             <header className='max-w-5xl mx-auto my-10 rounded-xl'>
                 <Banner donations={donations}></Banner>

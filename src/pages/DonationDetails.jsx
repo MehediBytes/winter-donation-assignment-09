@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -48,6 +49,9 @@ const DonationDetails = () => {
 
     return (
         <div className="p-8">
+            <Helmet>
+                <title>{donation.title} | Warm-Hearts</title>
+            </Helmet>
             {/* Donation Campaign CardDetails */}
             <div className="max-w-4xl mx-auto bg-base-100 shadow-xl border p-3 rounded-xl">
                 <figure className="h-96">

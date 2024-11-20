@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user, updateUserProfile, setUser } = useContext(AuthContext);
@@ -29,6 +30,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-blue-200">
+            <Helmet>
+                <title>Profile-Update | Warm-Hearts</title>
+            </Helmet>
             <form
                 onSubmit={handleUpdate}
                 className="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg border border-blue-300"

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const ForgotPassword = () => {
@@ -28,6 +29,9 @@ const ForgotPassword = () => {
 
     return (
         <div className="flex items-center justify-center min-h-screen">
+            <Helmet>
+                <title>Fogot-Password | Warm-Hearts</title>
+            </Helmet>
             <div className="p-8 bg-white rounded-lg shadow-md w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-4 text-center">Reset Password</h2>
                 <div>

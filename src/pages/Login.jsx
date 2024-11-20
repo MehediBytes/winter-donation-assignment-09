@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { login, googleLogin, showPassword, setShowPassword } = useContext(AuthContext);
@@ -39,6 +40,9 @@ const Login = () => {
 
     return (
         <div className="flex items-center justify-center my-10">
+            <Helmet>
+                <title>Login | Warm-Hearts</title>
+            </Helmet>
             <div className="p-8 bg-white rounded-lg shadow-lg w-full max-w-md border border-blue-300">
                 <h2 className="text-3xl font-bold mb-6 text-center text-blue-700 animate__animated animate__slower animate__fadeInDown">
                     Login
@@ -90,7 +94,7 @@ const Login = () => {
                     <button
                         type="button"
                         onClick={handleGoogleLogin}
-                        className="btn w-full bg-blue-100 text-blue-600 border-blue-400 hover:bg-blue-200 rounded-lg flex items-center justify-center space-x-2 shadow-sm"
+                        className="btn w-full bg-white text-blue-600 border-blue-400 hover:bg-blue-200 rounded-lg flex items-center justify-center space-x-2 shadow-sm"
                     >
                         <FaGoogle className="text-lg" />
                         <span>Login with Google</span>
