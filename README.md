@@ -26,3 +26,5 @@ The **Winter Clothing Donation Website** is a single-page web application design
 - **React Toastify**: For displaying notifications and toast messages.
 - **React icons**: For using icons.
 - **Animate.css**: For using various eyecatching animation.
+- **React-Helemt**: For dynamic title.
+- **React-Snowfall**: For snowfall effect and give the website a winter-themed.

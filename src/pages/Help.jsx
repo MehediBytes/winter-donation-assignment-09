@@ -5,13 +5,13 @@ import { Helmet } from "react-helmet-async";
 
 const Help = () => {
     return (
-        <div className="max-w-5xl mx-auto my-10">
+        <div className="max-w-5xl mx-auto my-10 overflow-x-hidden content-wrapper">
             <Helmet>
                 <title>Help | Warm-Hearts</title>
             </Helmet>
             <div className="px-6">
                 {/* Header Section */}
-                <div className="text-center bg-cover bg-center bg-no-repeat p-10 lg:p-24 w-full mx-auto mb-10 rounded-lg" style={{ backgroundImage: `url(${bannerBg})` }}>
+                <div className="text-center bg-cover bg-center bg-no-repeat p-10 lg:p-24 w-full mx-auto mb-10 rounded-lg" style={{ backgroundImage: `url(${bannerBg})`, backgroundSize: "cover" }}>
                     <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold text-blue-900 my-6 animate__animated animate__slower animate__fadeInDown">
                         Spread Warmth with Winter Clothing Donations
                     </h1>
@@ -75,11 +75,13 @@ const Help = () => {
                     <p className="text-lg text-blue-600 mb-6">
                         Every donation brings warmth and hope to someone's life. Start your journey of giving today.
                     </p>
-                    <Link to={"/donation"}>
-                        <button className="btn btn-primary text-white py-3 px-8 rounded-full animate__animated animate__pulse animate__infinite">
-                            Donate Now
-                        </button>
-                    </Link>
+                    <div className="overflow-hidden">
+                        <Link to={"/donation"}>
+                            <button className="btn btn-primary text-white py-3 px-8 rounded-full animate__animated animate__pulse animate__infinite">
+                                Donate Now
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

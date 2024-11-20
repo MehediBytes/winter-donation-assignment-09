@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../assets/footer-logo.jpg'
+import footerLogo from '../assets/footer-logo.jpg'
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer bg-[#98b4cb] text-[#ffffff] p-10">
+            <footer className="footer bg-[#98b4cb] text-white p-10">
                 <nav>
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -28,7 +28,7 @@ const Footer = () => {
             </footer>
             <footer className="footer bg-[#98b4cb] text-[#ffffff] border-white border-t items-center p-4">
                 <aside className="grid-flow-col items-center gap-10">
-                    <img className='rounded-full w-24 h-24' src={logo} alt="" />
+                    <img className='rounded-full w-24 h-24' src={footerLogo} alt="" />
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </aside>
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
