@@ -56,7 +56,7 @@ const Navbar = () => {
                     </div>
                     <div>
                         {
-                            user && user?.email ? (<button onClick={logout} className="btn btn-neutral">Log-Out</button>) : (<Link to={"/auth/login"} className="btn btn-primary">Login</Link>)
+                            user && user?.email ? (<button onClick={logout} className="btn btn-neutral">Log-Out</button>) : (<Link to={"/auth/login"} className="btn btn-primary text-white">Login</Link>)
                         }
                     </div>
 

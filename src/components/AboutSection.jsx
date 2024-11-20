@@ -7,7 +7,7 @@ const AboutSection = () => {
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
                 About Us
             </h2>
-            <hr className="border-t-2 border-blue-200 w-2/3 mx-auto" />
+            <hr className="border-t-2 border-blue-200 max-w-xs mx-auto" />
             <p className="text-gray-800 text-lg text-center">
                 Winter can be harsh, but together, we can make it warmer for everyone.
                 Our mission is simple yet powerful: <span className="font-semibold">to bring warmth and comfort to those who need it the most. </span> 

@@ -1,13 +1,19 @@
 import React from 'react';
 import 'animate.css';
+import testimonialBanner from "../assets/testimonial-banner.jpg";
 
 const Testimonials = () => {
     return (
         <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-lg shadow-lg space-y-10">
+            <div className='relative'>
+                <img className='h-full w-full object-cover rounded-xl opacity-80' src={testimonialBanner} alt="" />
+                <h3 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center md:text-2xl font-bold text-white'>Donate for the <br />
+                <span className='text-xl md:text-3xl'>Humanity</span></h3>
+            </div>
             <h2 className="text-4xl font-extrabold text-center text-blue-600 animate__animated animate__heartBeat animate__slower animate__infinite">
-                What People Are Saying
+                What People Are Saying ?
             </h2>
-            <hr className="border-t-2 border-blue-300 w-2/3 mx-auto"/>
+            <hr className="border-t-2 border-blue-300 max-w-xs mx-auto"/>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105">
                     <p className="italic text-gray-700 text-lg">
