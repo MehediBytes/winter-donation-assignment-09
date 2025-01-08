@@ -70,8 +70,8 @@ The **Warm-Hearts** is a single-page web application designed to connect donors 
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/MehediBytes/crowd-cube-client.git
-   cd crowd-cube-client
+   git clone https://github.com/MehediBytes/winter-donation-assignment-09.git
+   cd winter-donation-assignment-09
    ```
 
 2. **Install Dependencies**:  
